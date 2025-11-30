@@ -1,0 +1,70 @@
+<h2>一、华为网管操作</h2>
+<h3>1. 一些常用命令</h3>
+<ol>
+    <li><strong>查询小区</strong>：DSP CELL DSP NRCELL</li>
+    <li><strong>查询小区用户接入量</strong>：DSP CELL DSP ALLUEBASICINFO</li>
+    <li><strong>查询GPS以及捕获卫星数量</strong>：DSP GNSS</li>
+    <li><strong>修改小区名称</strong>：先LST CELL，再MOD CELL，最后DSP CELL查询一遍；先LST RRU，再MOD RRU，最后查询一遍</li>
+    <li><strong>查询BBU条码</strong>：LST ESN；<br>
+        <strong>速率超出处理</strong>：1. LST EUCELL 2. MOD EUCELL进行修改；<br>
+        <strong>查看驻波</strong>：DSP VSWR</li>
+    <li><strong>光衰整治</strong>：BBU到传输910 6、7槽主控板，使用DSP SFP</li>
+    <li><strong>查询经纬度</strong>：<br>
+        <strong>基站(eNodeB)</strong>：LST ENODEB（查询基站配置信息，可能包含经纬度）<br>
+        <strong>小区(CELL)</strong>：LST CELL（查询小区静态参数，部分版本显示经纬度）</li>
+</ol>
+
+<div class="note">
+    <strong>提示：</strong>以上命令需在网管系统中执行，操作前请确认权限和操作环境。
+</div>
+
+<h2>二、爱立信网管操作</h2>
+<h3>进入AMOS后</h3>
+<p>lt all 查询告警</p>
+
+<h3>命令功能说明</h3>
+<table>
+    <tr>
+        <th>命令</th>
+        <th>功能说明</th>
+    </tr>
+    <tr>
+        <td>lga</td>
+        <td>用于查询历史告警信息</td>
+    </tr>
+    <tr>
+        <td>alt 或 al</td>
+        <td>用于查看当前活动告警</td>
+    </tr>
+    <tr>
+        <td>st cell</td>
+        <td>查询小区状态</td>
+    </tr>
+    <tr>
+        <td>st rru</td>
+        <td>查询RRU状态</td>
+    </tr>
+    <tr>
+        <td>invxrbg</td>
+        <td>查询收光信息</td>
+    </tr>
+    <tr>
+        <td>st gps</td>
+        <td>查询GPS状态</td>
+    </tr>
+    <tr>
+        <td>st sector</td>
+        <td>检查扇区状态（包含方位角等位置信息）</td>
+    </tr>
+    <tr>
+        <td>get Synchronization</td>
+        <td>查看基站同步源和信息（确认是否处于 "Locked_Mode"）</td>
+    </tr>
+    <tr>
+        <td>lhlist</td>
+        <td>查询RRU、BBU条码</td>
+    </tr>
+</table>
+
+<h2>三、中兴网管操作</h2>
+<p>（当前文档未提供中兴网管操作详细内容）</p>
